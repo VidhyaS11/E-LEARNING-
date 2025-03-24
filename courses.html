@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learnhub - Courses</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>LearnHub
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Course Filters -->
+    <section class="course-filters py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option>Web Development</option>
+                        <option>Data Science</option>
+                        <option>Mobile Development</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <select class="form-select" id="levelFilter">
+                        <option value="">All Levels</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search courses..." id="courseSearch">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Grid -->
+    <section class="course-grid py-5">
+        <div class="container">
+            <div class="row" id="courseList">
+                <!-- Courses loaded from courses.js -->
+            </div>
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/courses.js" defer></script>
+</body>
+</html>

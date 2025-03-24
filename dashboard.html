@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+    <title>LearnHub - Dashboard</title>
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header py-4 bg-primary text-white">
+        <div class="container">
+            <h1>My Dashboard</h1>
+            <p>Track your learning progress and achievements</p>
+        </div>
+    </section>
+
+    <!-- Progress Overview -->
+    <section class="progress-overview py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="progress-circle mx-auto mb-3" data-value="75">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                                </svg>
+                                <div class="progress-text">75%</div>
+                            </div>
+                            <h5>Overall Completion</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h2 class="display-4 mb-3">12</h2>
+                            <h5>Courses Enrolled</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h2 class="display-4 mb-3">3</h2>
+                            <h5>Certificates Earned</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Courses -->
+    <section class="current-courses py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Courses in Progress</h2>
+            <div class="row" id="currentCourses">
+                <!-- Loaded from progress.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Chart -->
+    <section class="activity-chart py-5">
+        <div class="container">
+            <h2 class="mb-4">Learning Activity</h2>
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="activityChart" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>
